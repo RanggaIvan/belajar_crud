@@ -1,3 +1,6 @@
+<?php
+include 'koneksi.php';
+?>
 <html>
 <head>
     <title>Menampilkan database web</title>
@@ -19,7 +22,6 @@
         
         
     <?php
-        $connect = mysqli_connect("localhost","root","","db_perpusweb");
 
         $no = 1;
         $data = mysqli_query($connect,"SELECT * FROM anggota");
@@ -51,7 +53,6 @@
         
         
     <?php
-        $connect = mysqli_connect("localhost","root","","db_perpusweb");
 
         $no = 1;
         $data = mysqli_query($connect,"SELECT * FROM admin");
@@ -85,7 +86,7 @@
         
         
     <?php
-        $connect = mysqli_connect("localhost","root","","db_perpusweb");
+ 
 
         $no = 1;
         $data = mysqli_query($connect,"SELECT * FROM book");
