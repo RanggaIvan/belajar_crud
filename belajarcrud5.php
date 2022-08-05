@@ -7,7 +7,7 @@ include 'koneksi.php';
 </head>
 <body>
     <h2>Anggota</h2>
-    <a href="tambah,php">Tambah Data</a>
+    <a href="tambah.php">Tambah Data</a>
     <br/>
     <br/>
 
@@ -40,15 +40,11 @@ include 'koneksi.php';
 </table>
 
 <h2>Admin</h2>
-    <a href="tambah,php">Tambah Data</a>
-    <br/>
-    <br/>
-
     <table border="1">
         <tr>
             <th>No</th>
+            <th>Id Admin</th>
             <th>Username</th>
-            <th>Password</th>
         </tr>
         
         
@@ -60,8 +56,8 @@ include 'koneksi.php';
             ?>
             <tr>
                 <td><?php echo $no++ ?></td>
+                <td><?php echo $d['id_admin'] ?></td>
                 <td><?php echo $d['username'] ?></td>
-                <td><?php echo $d['password'] ?></td>
             </tr>
             <?php
         }
@@ -70,14 +66,10 @@ include 'koneksi.php';
 </table>
 
 <h2>Buku</h2>
-    <a href="tambah,php">Tambah Data</a>
-    <br/>
-    <br/>
 
     <table border="1">
         <tr>
             <th>No</th>
-            <th>Id Katalog</th>
             <th>Judul Buku</th>
             <th>Pengarang</th>
             <th>Tahun Terbit</th>
@@ -94,7 +86,6 @@ include 'koneksi.php';
             ?>
             <tr>
                 <td><?php echo $no++ ?></td>
-                <td><?php echo $d['id_katalog'] ?></td>
                 <td><?php echo $d['judul_buku'] ?></td>
                 <td><?php echo $d['pengarang'] ?></td>
                 <td><?php echo $d['thn_terbit'] ?></td>
