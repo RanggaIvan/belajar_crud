@@ -18,6 +18,7 @@ include 'koneksi.php';
             <th>No Telp</th>
             <th>Alamat</th>
             <th>Email</th>
+            <th>Aksi</th>
         </tr>
         
         
@@ -33,6 +34,8 @@ include 'koneksi.php';
                 <td><?php echo $d['no_telp'] ?></td>
                 <td><?php echo $d['alamat'] ?></td>
                 <td><?php echo $d['email'] ?></td>
+                <td><a href="hapus/hapusanggota.php?id_anggota=<?php echo $d['id_anggota']; ?>">Hapus</a></td>
+                <td><a href="editanggota.php">Edit</a></td>
             </tr>
             <?php
         }
@@ -43,8 +46,8 @@ include 'koneksi.php';
     <table border="1">
         <tr>
             <th>No</th>
-            <th>Id Admin</th>
             <th>Username</th>
+            <th>Aksi</th>
         </tr>
         
         
@@ -56,8 +59,9 @@ include 'koneksi.php';
             ?>
             <tr>
                 <td><?php echo $no++ ?></td>
-                <td><?php echo $d['id_admin'] ?></td>
                 <td><?php echo $d['username'] ?></td>
+                <td><a href="hapus/hapusadmin.php?id_admin=<?php echo $d['id_admin']; ?>">Hapus</a></td>
+                <td><a href="editadmin.php">Edit</a></td>
             </tr>
             <?php
         }
@@ -74,6 +78,7 @@ include 'koneksi.php';
             <th>Pengarang</th>
             <th>Tahun Terbit</th>
             <th>Penerbit</th>
+            <th>Aksi</th>
         </tr>
         
         
@@ -90,6 +95,8 @@ include 'koneksi.php';
                 <td><?php echo $d['pengarang'] ?></td>
                 <td><?php echo $d['thn_terbit'] ?></td>
                 <td><?php echo $d['penerbit'] ?></td>
+                <td><a href="hapus/hapusbuku.php?id_buku=<?php echo $d['id_buku']; ?>">Hapus</a></td>
+                
             </tr>
             <?php
         }

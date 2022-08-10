@@ -5,7 +5,12 @@
 <body>
     <h2>Silahkan Tambah Data Anggota</h2>
     <br/>
-
+    <label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+  <option value="volvo">Anggota</option>
+  <option value="saab">Admin</option>
+  <option value="fiat">Buku</option>
+</select>
     <form method="post" action="proses.php">
         <label for="">Nama</label>
         <input type="text" name="nama" id="nama">
@@ -23,6 +28,8 @@
         <input type="password" name="password" id="password">
         <br>
         <input type="submit" value="simpan">
+
+        
     </form>
 </body>
 </html>
